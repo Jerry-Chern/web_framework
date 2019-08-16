@@ -22,7 +22,6 @@ def response_for_path(request):
     """
     r = {}
     # 注册外部的路由
-    # r.update(todo_routes())
     r.update(weibo_routes())
     r.update(user_routes())
     r.update(public_routes())
@@ -63,6 +62,7 @@ def run(host, port):
     """
     # 初始化 ORM
     SQLModel.init_db()
+    log('数据库链接初始化 <{}>'.format(SQLModel.connection.host_info))
     log('开始运行于', 'http://{}:{}'.format(host, port))
     with socket.socket() as s:
         s.bind((host, port))

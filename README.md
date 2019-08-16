@@ -22,9 +22,8 @@
    2. 输入本地数据库密码
 
 2. 执行如下文件
-
-   `python3 reset.py`
-   `python3 server.py`
+   - `python3 reset.py`
+   - `python3 server.py`
 
 ### 预览
 
